@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
+import Hero from "@/components/Home/hero";
 
 export default function Home() {
     const [userAddress, setUserAddress] = useState("");
@@ -21,16 +22,16 @@ export default function Home() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center">
-            <div className="h1">
-                There you go... a canvas for your next Celo project!
-            </div>
+        <div className="">
+            
             {isConnected ? (
-                <div className="h2 text-center">
+                <div className="">
                     Your address: {userAddress}
                 </div>
             ) : (
-                <div>No Wallet Connected</div>
+                <div>
+                  <Hero />
+                </div>
             )}
         </div>
     );
