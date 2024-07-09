@@ -10,6 +10,7 @@ import { http, WagmiProvider, createConfig } from "wagmi";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
 import { celo, celoAlfajores } from "wagmi/chains";
+import { Poppins } from 'next/font/google';
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -37,6 +38,11 @@ const config = createConfig({
 
 const queryClient = new QueryClient();
 
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+  });
+
 function App({ Component, pageProps }: AppProps) {
     return (
         <WagmiProvider config={config}>
@@ -49,9 +55,11 @@ function App({ Component, pageProps }: AppProps) {
                     fontStack: 'system',
                   })}  
                 >
-                    <Layout>
+                    <div className="className={poppins.className}">
+                    <Layout >
                         <Component {...pageProps} />
                     </Layout>
+                    </div>
                 </RainbowKitProvider>
             </QueryClientProvider>
         </WagmiProvider>
