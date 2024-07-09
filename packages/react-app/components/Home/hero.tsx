@@ -40,9 +40,9 @@ export default function Hero() {
           className="filter brightness-50 shadow' block h-[500px] sm:h-[700px] w-full object-cover"
         />
 
-        <div className="absolute my-[50px] sm:my-[100px] ml-[50px] inset-0 w-[492.59px] items-center justify-center text-left">
-          <h1 className="text-[25px] sm:text-[33px]">
-            Discover Decentralized News Earn <br /> Tokens for Sharing and
+        <div className="absolute my-[50px] sm:my-[100px] ml-[30px] sm:ml-[50px] inset-0 w-[492.59px] items-center justify-center text-left">
+          <h1 className="md:text-[35px] font-bold leading-9">
+            Discover Decentralized News <br /> Earn  Tokens for Sharing and
             Creating Content
           </h1>
           <p className="text-[10px] sm:text-[14px] my-[20px]">
@@ -102,7 +102,7 @@ export default function Hero() {
           <div className="py-3">
             <div className="flex">
               <Image
-                src="/images/icon1.png"
+                src="/icon1.png"
                 width="45"
                 height="45"
                 alt="icon"
@@ -121,7 +121,7 @@ export default function Hero() {
       </div>
 
       <div className="bg-[#feebd4] py-[50px]">
-        <h1 className="text-dark text-center text-[25px] sm:text-[30px] py-[50px]">
+        <h1 className="text-dark font-semibold leading-8 text-center text-[25px] sm:text-[30px] py-[50px]">
           Latest News
         </h1>
 
@@ -133,8 +133,8 @@ export default function Hero() {
          
             <div className="sm:flex">
               <div className="grid">
-                <h1 className="text-[#dc950e] text-[18px] font-bold leading-6 ">{news.title}</h1>
-                <h2 className="text-dark text-[18px] py-3 leading-6 ">{news.header}</h2>
+                <h1 className="text-[#dc950e] text-[18px] font-extrabold leading-6 ">{news.title}</h1>
+                <h2 className="text-dark text-[18px] py-3 font-semibold leading-6 ">{news.header}</h2>
                 <p className="text-[#5d5d5c]">
                  {news.description}
                 </p>
@@ -155,7 +155,7 @@ export default function Hero() {
         <div>
           <div className="bg-[#f5eddf] py-[70px]">
            
-            <h3 className="text-center px-[50px] sm:text-[20px]">Launch Your Journey with <span className="text-[#ac740c]">ChainTip</span> , Where Creators Write News and Earn Tokens!</h3>
+            <h3 className=" font-semibold text-center text-[#4E4E4E] px-[50px] sm:text-[20px]">Launch Your Journey with <span className="text-[#ac740c]">ChainTip</span> , Where Creators Write News and Earn Tokens!</h3>
             <div className="grid justify-items-center">
             <button className="bg-[#ac740c]  text-white px-4 py-2 rounded-md mt-[20px]">
               Get Started
