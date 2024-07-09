@@ -1,5 +1,6 @@
 import {
     RainbowKitProvider,
+    lightTheme,
     connectorsForWallets,
 } from "@rainbow-me/rainbowkit";
 import { injectedWallet } from "@rainbow-me/rainbowkit/wallets";
@@ -40,7 +41,14 @@ function App({ Component, pageProps }: AppProps) {
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
-                <RainbowKitProvider>
+                <RainbowKitProvider
+                  theme={lightTheme({
+                    accentColor: '#ac740c',
+                    accentColorForeground: 'white',
+                    borderRadius: 'medium',
+                    fontStack: 'system',
+                  })}  
+                >
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>

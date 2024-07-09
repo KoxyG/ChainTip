@@ -18,7 +18,7 @@ export default function Header() {
     }, []);
 
     return (
-        <Disclosure as="nav" className="bg-prosperity border-b border-black">
+        <Disclosure as="nav" className="bg-[#fbfbfb] border-b border-black">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -55,13 +55,31 @@ export default function Header() {
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                     <a
                                         href="#"
-                                        className="inline-flex items-center border-b-2 border-black px-1 pt-1 text-sm font-medium text-gray-900"
+                                        className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
                                     >
                                         Home
                                     </a>
                                 </div>
+
+                                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                                    <a
+                                        href="#"
+                                        className="inline-flex items-center border-b-2  px-1 pt-1 text-sm font-medium text-gray-900"
+                                    >
+                                        Trending
+                                    </a>
+                                </div>
+
+                                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                                    <a
+                                        href="#"
+                                        className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
+                                    >
+                                        Categories
+                                    </a>
+                                </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                            <div className="absolute  inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 {!hideConnectBtn && (
                                     <ConnectButton
                                         showBalance={{
