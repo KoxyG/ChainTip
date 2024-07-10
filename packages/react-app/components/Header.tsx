@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useConnect } from "wagmi";
 import { injected } from "wagmi/connectors";
+import Link from 'next/link';
+
 
 export default function Header() {
     const [hideConnectBtn, setHideConnectBtn] = useState(false);
@@ -15,7 +17,7 @@ export default function Header() {
             setHideConnectBtn(true);
             connect({ connector: injected({ target: "metaMask" }) });
         }
-    }, []);
+    }, [connect]);
 
     return (
         <Disclosure as="nav" className="bg-[#fbfbfb] border-b border-black">
@@ -62,12 +64,12 @@ export default function Header() {
                                 </div>
 
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        href="/Create"
                                         className="inline-flex items-center border-b-2  px-1 pt-1 text-sm font-medium text-gray-900"
                                     >
-                                        Trending
-                                    </a>
+                                        Create
+                                    </Link>
                                 </div>
 
                                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -75,7 +77,7 @@ export default function Header() {
                                         href="#"
                                         className="inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium text-gray-900"
                                     >
-                                        Categories
+                                        Trending
                                     </a>
                                 </div>
                             </div>
